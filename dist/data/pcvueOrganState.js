@@ -23,6 +23,7 @@
  * <http://resources.spinalcom.com/licenses.pdf>.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.pcvueOrganState = void 0;
 var pcvueOrganState;
 (function (pcvueOrganState) {
     pcvueOrganState["initial"] = "initial";

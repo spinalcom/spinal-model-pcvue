@@ -1,6 +1,6 @@
 {
   "name": "spinal-model-pcvue",
-  "version": "1.3.1",
+  "version": "2.0.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -15,6 +15,7 @@
     "spinal-env-viewer-graph-service": "git+https://github.com/spinalcom/Spinal-Graph-Service.git",
     "spinal-lib-forgefile": "git+https://github.com/spinalcom/spinal-lib-forgefile.git",
     "spinal-model-timeseries": "git+https://github.com/spinalcom/spinal-model-timeseries.git",
+    "spinal-connector-service": "git+https://github.com/spinalcom/spinal-connector-service.git",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

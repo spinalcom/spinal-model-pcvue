@@ -23,8 +23,10 @@
  * <http://resources.spinalcom.com/licenses.pdf>.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.PCVueListenerModel = void 0;
 const spinal_core_connectorjs_type_1 = require("spinal-core-connectorjs_type");
 const uuid_1 = require("uuid");
+// import SpinalOrganConfigModel from './SpinalOrganConfigModel';
 class PCVueListenerModel extends spinal_core_connectorjs_type_1.Model {
     constructor(graph, context, network, organ, monitor) {
         super();
@@ -33,10 +35,10 @@ class PCVueListenerModel extends spinal_core_connectorjs_type_1.Model {
             listen: true,
             saveTimeSeries: monitor === null || monitor === void 0 ? void 0 : monitor.saveTimeSeries,
             intervalTime: monitor === null || monitor === void 0 ? void 0 : monitor.interval,
-            graph: new spinal_core_connectorjs_type_1.Ptr(graph),
-            context: new spinal_core_connectorjs_type_1.Ptr(context),
-            network: new spinal_core_connectorjs_type_1.Ptr(network),
-            organ: new spinal_core_connectorjs_type_1.Ptr(organ)
+            graph: new spinal_core_connectorjs_type_1.Pbr(graph),
+            context: new spinal_core_connectorjs_type_1.Pbr(context),
+            network: new spinal_core_connectorjs_type_1.Pbr(network),
+            organ: new spinal_core_connectorjs_type_1.Pbr(organ)
         });
     }
 }

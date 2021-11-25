@@ -22,12 +22,13 @@
  * <http://resources.spinalcom.com/licenses.pdf>.
  */
 
-import { spinalCore, Model, Ptr } from 'spinal-core-connectorjs_type';
-import { SpinalGraph } from 'spinal-model-graph';
-import SpinalOrganConfigModel from './SpinalOrganConfigModel';
-import { v4 as uuidv4 } from "uuid";
+import { Model, Pbr, spinalCore } from 'spinal-core-connectorjs_type';
 import { SpinalContext, SpinalNode } from 'spinal-env-viewer-graph-service';
+import { SpinalGraph } from 'spinal-model-graph';
+import { v4 as uuidv4 } from "uuid";
 import { INetwork } from '../data/INetwork';
+import { SpinalOrganConfigModel } from "spinal-connector-service";
+// import SpinalOrganConfigModel from './SpinalOrganConfigModel';
 
 class PCVueListenerModel extends Model {
     constructor(graph: SpinalGraph<any>, context: SpinalContext<any>, network: SpinalNode<any>, organ: SpinalOrganConfigModel, monitor: INetwork) {
@@ -38,10 +39,10 @@ class PCVueListenerModel extends Model {
             listen: true,
             saveTimeSeries: monitor?.saveTimeSeries,
             intervalTime: monitor?.interval,
-            graph: new Ptr(graph),
-            context: new Ptr(context),
-            network: new Ptr(network),
-            organ: new Ptr(organ)
+            graph: new Pbr(graph),
+            context: new Pbr(context),
+            network: new Pbr(network),
+            organ: new Pbr(organ)
         })
     }
 }
@@ -49,4 +50,4 @@ class PCVueListenerModel extends Model {
 
 spinalCore.register_models([PCVueListenerModel])
 export default PCVueListenerModel;
-export { PCVueListenerModel }
+export { PCVueListenerModel };

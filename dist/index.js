@@ -23,14 +23,21 @@
  * <http://resources.spinalcom.com/licenses.pdf>.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const SpinalPCVueDiscoverModel_1 = require("./models/SpinalPCVueDiscoverModel");
-exports.SpinalPCVueDiscoverModel = SpinalPCVueDiscoverModel_1.SpinalPCVueDiscoverModel;
-const pcvueOrganState_1 = require("./data/pcvueOrganState");
-exports.pcvueOrganState = pcvueOrganState_1.pcvueOrganState;
-const SpinalOrganConfigModel_1 = require("./models/SpinalOrganConfigModel");
-exports.SpinalOrganConfigModel = SpinalOrganConfigModel_1.SpinalOrganConfigModel;
-const PCVueListenerModel_1 = require("./models/PCVueListenerModel");
-exports.PCVueListenerModel = PCVueListenerModel_1.PCVueListenerModel;
-const constants_1 = require("./data/constants");
-exports.PCVUE_ORGAN_TYPE = constants_1.PCVUE_ORGAN_TYPE;
+var constants_1 = require("./data/constants");
+Object.defineProperty(exports, "PCVUE_ORGAN_TYPE", { enumerable: true, get: function () { return constants_1.PCVUE_ORGAN_TYPE; } });
+var pcvueOrganState_1 = require("./data/pcvueOrganState");
+Object.defineProperty(exports, "pcvueOrganState", { enumerable: true, get: function () { return pcvueOrganState_1.pcvueOrganState; } });
+var PCVueListenerModel_1 = require("./models/PCVueListenerModel");
+Object.defineProperty(exports, "PCVueListenerModel", { enumerable: true, get: function () { return PCVueListenerModel_1.PCVueListenerModel; } });
+// export { SpinalOrganConfigModel } from "./models/SpinalOrganConfigModel";
+var SpinalPCVueDiscoverModel_1 = require("./models/SpinalPCVueDiscoverModel");
+Object.defineProperty(exports, "SpinalPCVueDiscoverModel", { enumerable: true, get: function () { return SpinalPCVueDiscoverModel_1.SpinalPCVueDiscoverModel; } });
+// export {
+//     SpinalOrganConfigModel,
+//     SpinalPCVueDiscoverModel,
+//     pcvueOrganState,
+//     INetwork,
+//     PCVUE_ORGAN_TYPE,
+//     PCVueListenerModel
+// };
 //# sourceMappingURL=index.js.map

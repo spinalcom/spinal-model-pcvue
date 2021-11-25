@@ -1,7 +1,7 @@
-import { Model, File as SpinalFile } from 'spinal-core-connectorjs_type';
+import { File as SpinalFile, Model } from 'spinal-core-connectorjs_type';
 import { SpinalContext, SpinalGraph } from 'spinal-env-viewer-graph-service';
-import SpinalOrganConfigModel from './SpinalOrganConfigModel';
 import { INetwork } from '../data/INetwork';
+import { SpinalOrganConfigModel } from "spinal-connector-service";
 declare class SpinalPCVueDiscoverModel extends Model {
     constructor(graph: SpinalGraph<any>, context: SpinalContext<any>, organ: SpinalOrganConfigModel, network: INetwork, file: typeof SpinalFile);
     getGraph(): Promise<SpinalGraph<any>>;

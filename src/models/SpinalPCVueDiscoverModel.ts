@@ -21,11 +21,11 @@
  * with this file. If not, see
  * <http://resources.spinalcom.com/licenses.pdf>.
  */
-import { spinalCore, Model, File as SpinalFile, Ptr, Lst, Choice } from 'spinal-core-connectorjs_type';
+import { Choice, File as SpinalFile, Lst, Model, Pbr, Ptr, spinalCore } from 'spinal-core-connectorjs_type';
 import { SpinalContext, SpinalGraph } from 'spinal-env-viewer-graph-service';
-import SpinalOrganConfigModel from './SpinalOrganConfigModel';
 import { v4 as uuidv4 } from "uuid";
 import { INetwork } from '../data/INetwork';
+import { SpinalOrganConfigModel } from "spinal-connector-service";
 
 class SpinalPCVueDiscoverModel extends Model {
 
@@ -37,10 +37,10 @@ class SpinalPCVueDiscoverModel extends Model {
             state: new Choice(0, ["initial", "uploading", "uploaded", "converting", "converted", "creating", "created", "error"]),
             network,
             //@ts-ignore
-            file: new Ptr(file),
-            organ: new Ptr(organ),
-            context: new Ptr(context),
-            graph: new Ptr(graph)
+            file: new Pbr(file),
+            organ: new Pbr(organ),
+            context: new Pbr(context),
+            graph: new Pbr(graph)
         })
     }
 
@@ -152,14 +152,12 @@ class SpinalPCVueDiscoverModel extends Model {
     public setErrorState(): void {
         this.state.set("error");
     }
-
-
 }
 
 spinalCore.register_models([SpinalPCVueDiscoverModel]);
 
 export {
     SpinalPCVueDiscoverModel
-}
+};
 
 export default SpinalPCVueDiscoverModel;

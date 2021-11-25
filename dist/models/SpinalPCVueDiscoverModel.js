@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpinalPCVueDiscoverModel = void 0;
 /*
  * Copyright 2021 SpinalCom - www.spinalcom.com
  *
@@ -33,10 +34,10 @@ class SpinalPCVueDiscoverModel extends spinal_core_connectorjs_type_1.Model {
             state: new spinal_core_connectorjs_type_1.Choice(0, ["initial", "uploading", "uploaded", "converting", "converted", "creating", "created", "error"]),
             network,
             //@ts-ignore
-            file: new spinal_core_connectorjs_type_1.Ptr(file),
-            organ: new spinal_core_connectorjs_type_1.Ptr(organ),
-            context: new spinal_core_connectorjs_type_1.Ptr(context),
-            graph: new spinal_core_connectorjs_type_1.Ptr(graph)
+            file: new spinal_core_connectorjs_type_1.Pbr(file),
+            organ: new spinal_core_connectorjs_type_1.Pbr(organ),
+            context: new spinal_core_connectorjs_type_1.Pbr(context),
+            graph: new spinal_core_connectorjs_type_1.Pbr(graph)
         });
     }
     getGraph() {

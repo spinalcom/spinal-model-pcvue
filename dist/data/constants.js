@@ -23,6 +23,7 @@
  * <http://resources.spinalcom.com/licenses.pdf>.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.PCVUE_ORGAN_TYPE = void 0;
 const PCVUE_ORGAN_TYPE = "PCVUE_ORGAN";
 exports.PCVUE_ORGAN_TYPE = PCVUE_ORGAN_TYPE;
 //# sourceMappingURL=constants.js.map
