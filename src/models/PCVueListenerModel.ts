@@ -45,6 +45,34 @@ class PCVueListenerModel extends Model {
             organ: new Pbr(organ)
         })
     }
+
+    public getGraph(): Promise<SpinalGraph<any>> {
+        return new Promise((resolve, reject) => {
+            //@ts-ignore
+            this.graph.load((data) => resolve(data), (err) => reject(err))
+        });
+    }
+
+    public getOrgan(): Promise<SpinalOrganConfigModel> {
+        return new Promise((resolve, reject) => {
+            //@ts-ignore
+            this.organ.load((data) => resolve(data), (err) => reject(err))
+        });
+    }
+
+    public getContext(): Promise<SpinalContext<any>> {
+        return new Promise((resolve, reject) => {
+            //@ts-ignore
+            this.context.load((data) => resolve(data), (err) => reject(err))
+        });
+    }
+
+    public getNetwork(): Promise<SpinalNode<any>> {
+        return new Promise((resolve, reject) => {
+            //@ts-ignore
+            this.network.load((data) => resolve(data), (err) => reject(err))
+        });
+    }
 }
 
 

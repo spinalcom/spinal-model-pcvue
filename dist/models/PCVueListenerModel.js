@@ -41,6 +41,30 @@ class PCVueListenerModel extends spinal_core_connectorjs_type_1.Model {
             organ: new spinal_core_connectorjs_type_1.Pbr(organ)
         });
     }
+    getGraph() {
+        return new Promise((resolve, reject) => {
+            //@ts-ignore
+            this.graph.load((data) => resolve(data), (err) => reject(err));
+        });
+    }
+    getOrgan() {
+        return new Promise((resolve, reject) => {
+            //@ts-ignore
+            this.organ.load((data) => resolve(data), (err) => reject(err));
+        });
+    }
+    getContext() {
+        return new Promise((resolve, reject) => {
+            //@ts-ignore
+            this.context.load((data) => resolve(data), (err) => reject(err));
+        });
+    }
+    getNetwork() {
+        return new Promise((resolve, reject) => {
+            //@ts-ignore
+            this.network.load((data) => resolve(data), (err) => reject(err));
+        });
+    }
 }
 exports.PCVueListenerModel = PCVueListenerModel;
 spinal_core_connectorjs_type_1.spinalCore.register_models([PCVueListenerModel]);
